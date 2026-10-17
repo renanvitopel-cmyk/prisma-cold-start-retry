@@ -2,9 +2,26 @@
   "name": "prisma-cold-start-retry",
   "version": "0.1.0",
   "description": "Prisma Client extension that retries queries when a serverless database (Neon, Supabase...) was asleep and the first connection fails.",
-  "keywords": ["prisma", "prisma-extension", "neon", "serverless", "retry", "cold-start", "postgres", "P1001"],
+  "keywords": [
+    "prisma",
+    "prisma-extension",
+    "neon",
+    "serverless",
+    "retry",
+    "cold-start",
+    "postgres",
+    "P1001"
+  ],
   "license": "MIT",
   "author": "Renan Pivetta",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renanvitopel-cmyk/prisma-cold-start-retry.git"
+  },
+  "homepage": "https://github.com/renanvitopel-cmyk/prisma-cold-start-retry#readme",
+  "bugs": {
+    "url": "https://github.com/renanvitopel-cmyk/prisma-cold-start-retry/issues"
+  },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
@@ -13,9 +30,15 @@
       "default": "./dist/index.js"
     }
   },
-  "files": ["dist", "README.md", "LICENSE"],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "sideEffects": false,
-  "engines": { "node": ">=18" },
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "test": "npm run build && node --test test/unit.test.mjs",
