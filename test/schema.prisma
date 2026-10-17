@@ -1,0 +1,14 @@
+// Only used by the integration test. The URL points to a port where nothing listens,
+// so every connection attempt fails the same way a sleeping database does.
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://user:pass@127.0.0.1:1/db?connect_timeout=2"
+}
+
+model Item {
+  id Int @id
+}
